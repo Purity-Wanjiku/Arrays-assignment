@@ -12,13 +12,16 @@ var arr3 = [-5,9,5,3,2,-3,6,8,4,1];
 let sortit = arr3.sort()
 console.log("sort",sortit);
 
-// var arr = ["apple","mango","apple","orange","mango","mango"];
-// let duplicate = arr.filter()
+var arr = ["apple","mango","apple","orange","mango","mango"];
+let duplicate = [...new Set(arr)];  //set removes duplicate items from an array by converting the array to set
+console.log("duplicate",duplicate);  //the spread syntax includes all the elements of set to a new array
+// let duplicated = [...old Set(duplicate)];
+// console.log("duplicated",duplicated); 
 
 const arr5 = ["the","way","x",4];
 let result2 = arr5.includes("the");  //we use includes() to know if a value exists in an array
 console.log("find",result2);
 
 let word = "sevink";
-let sorted = word.sort();
+let sorted = word.split('').sort().join('');
 console.log(sorted);
